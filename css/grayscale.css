@@ -178,8 +178,9 @@
 }
 
 .projects-section {
+  background-image: url(../img/ruinartportret.jpg), url(../img/moettrein.jpg);
   padding: 10rem 0;
-  background-image: url("../img/ruinartportret.jpg");
+  
 }
 
 .projects-section .featured-text {
