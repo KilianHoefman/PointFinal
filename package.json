@@ -5,14 +5,14 @@
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "A grayscale one page HTML theme for Bootstrap.",
+    "description": "Point Final Gent",
     "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
+        "nightclub",
+        "ghent",
+        "overpoort",
+        "bottles",
+        "fireworks",
+        "drunk"
     ],
     "homepage": "https://startbootstrap.com/template-overviews/grayscale",
     "bugs": {
