@@ -38,6 +38,11 @@
   background-color: transparent;
 }
 
+#submitReservation{
+  margin: 2em;
+}
+
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -123,7 +128,34 @@
   font-size: 1rem;
 }
 
+/*CORONA*/
+
+
+.coronahead{
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.coronahead h1{
+  font-family: 'Varela Round';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.coronahead h2{
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
+  
   .masthead h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -198,7 +230,9 @@
   margin-bottom: 5rem;
 }
 
-
+.form-control #nrOfPeopleDropdown{
+  max-width: 20px;
+}
 
 .projects-section .featured-text {
   padding: 2rem;
@@ -325,12 +359,23 @@ a:hover {
 }
 
 @media (min-width: 400px) {
+  
   .projects-section {
     background-image: url(../img/ruinartportret.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+@media (max-width: 375px){
+  .coronahead{
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-signup.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
   }
 }
 
