@@ -27,10 +27,10 @@
           </div>
         </div>
         <div class="col-lg-8 mx-auto">
-            <form class="needs-validation" action="register.php" method="POST">
+            <form class="needs-validation" action="register.php" method="POST" novalidate>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
-                  <label for="firstname" class="text-white required">First name</label>
+                  <label for="firstname" class="text-white col-form-label required">First name</label>
                   <input type="text" name="fname" class="form-control
                       text-center" id="firstname" placeholder="First name" required>
                   <div class="valid-feedback">
@@ -41,7 +41,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="lastname" class="text-white required">Last name</label>
+                  <label for="lastname" class="text-white col-form-label required">Last name</label>
                   <input type="text" name="lname" class="form-control
                       text-center" id="lastname" placeholder="Last name" required>
                   <div class="valid-feedback">
@@ -54,9 +54,9 @@
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
-                  <label for="mail" class="text-white">E-mail address</label>
+                  <label for="mail" class="text-white col-form-label required">E-mail address</label>
                   <input type="email" name="mail" class="form-control
-                      text-center" placeholder="youremail@here.com" required>
+                      text-center" placeholder="youremail@here.com" id="mail" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -65,8 +65,8 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="phonenumber" class="text-white">Mobile phonenumber</label>
-                  <input type="tel" name="phone" id="phonenumber" class="form-control text-center required"
+                  <label for="phonenumber" class="text-white col-form-label required">Mobile phonenumber</label>
+                  <input type="tel" name="phone" id="phonenumber" class="form-control text-center"
                     placeholder="0412345678" required>
                   <div class="valid-feedback">
                     Looks good!
@@ -76,7 +76,7 @@
                   </div>
                 </div>
                     <div class="col-md-12 text-center">
-                        <button type="submit" name="submit" class="btn btn-primary" id="submitReservation">Submit</button>
+                        <button type="submit" name="submit" class="btn btn-primary" id="submitRegistration">Submit</button>
                       </div>
             </form>
         </div>
@@ -88,11 +88,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <footer class="bg-black small text-center text-white-50">
-      <div class="container">
-        Copyright &copy; Point Final 2019
-      </div>
-    </footer>
+    
   
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -101,5 +97,27 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+    <script>
+      (function () {
+          'use strict';
+          window.addEventListener('load', function () {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function (form) {
+                  form.addEventListener('submit', function (event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+  </script>
   </body>
+  <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Point Final 2019
+      </div>
+    </footer>
 </html>
