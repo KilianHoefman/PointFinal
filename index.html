@@ -138,10 +138,11 @@
               </div>
 
 
-              <div class="col-md-6">
-                <label for="nrpeople" class="text-white">Number of people
+              <div class="col-md-4">
+                <label for="nrpeople" class="text-white">Number of people <br>
                   (including yourself)</label>
-                <select name="selectionNr" id="nrpeople" class="form-control required" id="nrOfPeopleDropdown" required>
+                <select name="selectionNr" id="nrpeople" class="form-control text-center required" id="nrOfPeopleDropdown" required>
+                  <option value="1">1</option>
                   <option value="2" selected>2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
@@ -154,10 +155,9 @@
                 </select>
 
               </div>
-              <div class="col">
-                <label for="hour" class="text-white">Date & hour</label>
-                <input type="datetime-local" id="hour" class="form-control required
-                    w-100" name="time" required>
+              <div class="col-md-4">
+                <label for="hour" class="text-white required">Date & hour <br> (DD/MM - HH:MM)</label>
+                <input type="text" id="hour" class="form-control text-center required" placeholder="DD/MM - HH:MM" name="time" required>
                     <div class="valid-feedback">
                       Looks good!
                   </div>
@@ -165,8 +165,15 @@
                       Please fill in the date and or time.
                   </div>
               </div>
+              <div class="col-md-4">
+                <label for="location" class="text-white">Preference of location (Outdoors or indoors)</label>
+                <select name="location" id="location" class="form-control">
+                  <option value="buiten" selected>Outdoors</option>
+                  <option value="binnen">Inside</option>
+                </select>
+              </div>
               <div class="col-md-12 text-center">
-                <button type="submit" name="submit" class="btn btn-primary" id="submitReservation">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary" onclick="test()" id="submitReservation">Submit</button>
               </div>
           </form>
           <!-- <p class="text-white-50">
@@ -198,6 +205,7 @@
           }, false);
         })();
       </script>
+
   </section>
 
   <!-- Projects Section
