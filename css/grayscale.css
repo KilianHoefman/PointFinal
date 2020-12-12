@@ -154,6 +154,37 @@
   font-size: 1rem;
 }
 
+#confirmBody{
+  /* background: linear-gradient(to top, rgba(22, 22, 22, 0.3) 100%, rgba(22, 22, 22, 0.7) 0%, #161616 50%); */
+  background-color: #f9f9f9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 105vh;
+}
+
+.confirm{
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#titleConfirm{
+  font-family: 'Varela Round';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.pointlogoConfirm{
+  filter: invert(100);
+}
+
+
 @media (min-width: 768px) {
   
   .masthead h1 {
@@ -162,7 +193,7 @@
   }
 
   .projects-section {
-    background-image: url(../img/ruinartportret.jpg);
+    background-image: url("../img/ruinartportret.jpg");
 
   }
 }
@@ -358,10 +389,10 @@ a:hover {
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
   
   .projects-section {
-    background-image: url(../img/ruinartportret.jpg);
+    background-image: url("../img/ruinartportret.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -387,7 +418,7 @@ a:hover {
 
   .projects-section {
     padding: 10rem 0;
-    background-image: url(../img/moetijs.jpg);
+    background-image: url(./../img/moetijs.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;

@@ -50,8 +50,14 @@
             <a class="nav-link js-scroll-trigger" href="#photo">Photographers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#pictures">Pictures</a>
+            <a class="nav-link" href="https://www.pointfinal.gent/Prijslijst.pdf" target="_blank">Price List</a>
           </li>
+          <li class="nav-item">
+            <a href="./corona.html" class="nav-link">Register</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#pictures">Pictures</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#djs">Deejays</a>
           </li>
@@ -69,8 +75,7 @@
         <h1 class="">POINT FINAL</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5 text-uppercase">Ready to
           live the night of your life?</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Make a
-          reservation</a>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">MESSAGE ON OUR WALL</a>
       </div>
     </div>
   </header>
@@ -80,15 +85,97 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Reservations</h2>
+
+          <h2 class="text-white mb-4">Drop ur message on our wall!</h2>
+          <p class="text-white-50">Do you want your own personal message on our wall? Then look no further! <br>
+            For a small price (5€/message), you can put a small text linked to your favourite club onto one of its walls!
+            <br> <br>
+            Use the form below to send us your name, message and initials!
+          </p>
+
+          <form class="needs-validation" action="messages.php" method="POST" novalidate>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="firstname" class="text-white required">First name</label>
+                <input type="text" name="fname" class="form-control
+                    text-center" id="firstname" placeholder="First name" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in your first name.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastname" class="text-white required">Last name</label>
+                <input type="text" name="lname" class="form-control
+                    text-center" id="lastname" placeholder="Last name" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in your last name.
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="mail" class="text-white">E-mail address</label>
+                <input type="email" name="mail" class="form-control
+                    text-center" placeholder="youremail@here.com" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in your/valid e-mail address.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="initials" class="text-white">Initials</label>
+                <input type="text" name="initials" id="initials" class="form-control text-center required"
+                  placeholder="PF" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please fill in your initials.
+                </div>
+              </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12 mb-6">
+                  <label for="message" class="text-white required">Your message</label>
+                  <input type="text" id="message" class="form-control text-center required" placeholder="Ain't no party like an alcoholic party" name="message" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please fill in the message field.
+                    </div>
+                </div>                            
+              <div class="col-md-12 text-center">
+                <button type="submit" name="submit" class="btn btn-primary" id="submitReservation">Submit</button>
+              </div>
+          </form>
+
+          <!-- <h2 class="text-white mb-4">Reservations</h2>
           <p class="text-white-50">
             Given the global crisis, it is advised to make a reservation so
             that we can ensure you can enjoy your time.
             <br>Make sure to fill in all the fields.
             <br>We really can't wait to see you again in our beloved Point
-            Final.
-          </p>
-          <form class="needs-validation" action="reservations.php" method="POST" novalidate>
+            Final. <br>
+            Due to the newest restrictions by the governement, we are obliged to close our doors at 23h.  <br> From now on, we'll work with timeslots. <br>
+             <br>
+            <span class="text-white">
+              Make sure you are on time. 20 minutes late? Reservation gone. <br>The starting time of your timeslot is the time that you will need to be present.
+            </span>
+          </p> -->
+          
+
+          <!-- corona form for reservations -->
+          <!-- <form class="needs-validation" action="reservations.php" method="POST" novalidate>
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="firstname" class="text-white required">First name</label>
@@ -136,46 +223,63 @@
                   Please fill in your phone number.
                 </div>
               </div>
-
-
-              <div class="col-md-4">
-                <label for="nrpeople" class="text-white">Number of people <br>
-                  (including yourself)</label>
-                <select name="selectionNr" id="nrpeople" class="form-control text-center required" id="nrOfPeopleDropdown" required>
-                  <option value="1">1</option>
-                  <option value="2" selected>2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-
               </div>
-              <div class="col-md-4">
-                <label for="hour" class="text-white required">Date & hour <br> (DD/MM - HH:MM)</label>
-                <input type="text" id="hour" class="form-control text-center required" placeholder="DD/MM - HH:MM" name="time" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                  </div>
-                  <div class="invalid-feedback">
-                      Please fill in the date and or time.
-                  </div>
+
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="hour" class="text-white required">Date <br>(DD/MM)</label>
+                  <input type="text" id="hour" class="form-control text-center required" placeholder="example: 01/10" name="time" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please fill in the date and or time.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="timeslot" class="text-white">Timeslots <br>(Be present at 15h of 19h)</label>
+                  <select name="timeslot" class="form-control text-center required" id="timeslot" required>
+                    <option value="15u tot 19u">15u - 19u</option>
+                    <option value="19u tot 23u" selected>19u - 23u</option>
+                  </select>
+                    <div class="invalid-feedback">
+                        Please fill in the date and or time.
+                    </div>
+                </div>  
               </div>
-              <div class="col-md-4">
-                <label for="location" class="text-white">Preference of location (Outdoors or indoors)</label>
-                <select name="location" id="location" class="form-control">
-                  <option value="buiten" selected>Outdoors</option>
-                  <option value="binnen">Inside</option>
-                </select>
+              
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="nrpeople" class="text-white">Number of people <br>
+                    (including yourself)</label>
+                  <select name="selectionNr" id="nrpeople" class="form-control text-center required" id="nrOfPeopleDropdown" required>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+  
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="location" class="text-white">Preferenced location <br> (Outdoors or indoors)</label>
+                  <select name="location" id="location" class="form-control">
+                    <option value="buiten" selected>Outdoors</option>
+                    <option value="binnen">Inside</option>
+                  </select>
+                </div>
               </div>
               <div class="col-md-12 text-center">
-                <button type="submit" name="submit" class="btn btn-primary" onclick="test()" id="submitReservation">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary" id="submitReservation">Submit</button>
               </div>
-          </form>
+          </form> -->
+          
+          <!-- normal text for site -->
           <!-- <p class="text-white-50">
             Feel free to contact us on the following number for reservations.
             <br>Tables, special bottles and even throwing private parties, anything can be arranged.
@@ -185,6 +289,25 @@
             <i class="fas fa-mobile-alt text-primary mb-2"></i>
             +32 491 36 49 48</p>
         </div> -->
+        </div>
+        <div class="modal fade" id="modalReservation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -200,6 +323,9 @@
                   event.stopPropagation();
                 }
                 form.classList.add('was-validated');
+                if(!form.checkValidity() === false){
+                  popup();
+                }
               }, false);
             });
           }, false);
@@ -455,8 +581,9 @@
     <div class="container">
       <div class="row-lg-8 mx-auto">
         <div>
-          <h2 class="text-white mb-4">Pictures</h2>
-          <p class="text-white-50">Check out how insane our nights
+          
+          <!-- <h2 class="text-white mb-4">Pictures</h2> -->
+          <!-- <p class="text-white-50">Check out how insane our nights
             get</p>
           <div class='embedsocial-album' data-ref="6959e041aaffb82e34352ed8033ab9677789695c"></div>
           <script>
@@ -471,7 +598,7 @@
               d.getElementsByTagName("head")[0].appendChild(js);
             }(document, "script", "EmbedSocialScript"));
           </script>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

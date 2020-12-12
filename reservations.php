@@ -7,15 +7,17 @@ if(isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $nr = $_POST['selectionNr'];
     $datetime = $_POST['time'];
+    $timeslot = $_POST['timeslot'];
     $location = $_POST['location'];
 
     $subject = "Reservatie voor ".$datetime;
-    $message = "Reservatie gemaakt door ".$fname." ".$lname." voor ".$nr." personen op ".$datetime." !.\n\n
+    $message = "Reservatie gemaakt door ".$fname." ".$lname." voor ".$nr." personen op ".$datetime." - ".$timeslot." !\n\n
     Gegevens persoon:\n
     Naam: ".$fname." ".$lname."\n
     Mail: ".$mailFrom."\n
     Gsm-nummer: ".$phone."\n
     Datum: ".$datetime."\n
+    Tijdslot: ".$timeslot."\n
     Aantal personen: ".$nr . "\n
     Voorkeurslocatie: " . $location;
 
@@ -24,7 +26,7 @@ if(isset($_POST['submit'])){
     $txt = "Nieuwe reservatie Point Final van ".$fname." ".$lname.".\n\n".$message;
 
     mail($mailTo, $subject, $txt, $headers);
-    header("Location: index.html?mailsent");
+    header("Location: confirmReservation.html?mailsent");
 
 }
 
